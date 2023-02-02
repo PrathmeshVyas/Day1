@@ -1,0 +1,3 @@
+this is chemist.txt file
+
+it included all information

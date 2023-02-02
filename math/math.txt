@@ -1,0 +1,7 @@
+This is maths file
+
+program of addition of two numbers
+
+step1-take input two int variables n1 & n2
+step2-take third int variable store n1+n2 in it
+step3-return third variable
