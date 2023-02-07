@@ -1,0 +1,26 @@
+.d1 {
+    border:1px solid black;
+    height: 50px;
+    width: 200px;
+    position:relative;
+    /* padding-top: 10px; */
+}
+
+.d2 {
+    border:1px solid blue;
+    height: 50px;
+    width: 200px;
+    position: fixed;
+}
+
+.d3 {
+    border:1px solid green;
+    height: 50px;
+    width: 200px;
+}
+
+.parent {
+    height: 400px;
+    width: 300px;
+    border: 1px solid red;
+}
