@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS assignment 2</title>
+    <style>
+    * {
+        margin:10px;
+        font-size: 25px;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <label>Please enter date:</label><input type="text" id="date" placeholder="MM-DD-YYYY"><label> format should be MM-DD-YYYY</label><br>
+    <button type="button" onclick="getdate()">Submit</button>
+    <button type="submit" onclick="window.location.reload();">Reset</button>
+    <h2 id="h2"></h2>
+</body>
+<script>
+    document.getElementById('h1').innerHTML='Enter date';
+
+    function getdate(){
+        let arr = document.getElementById('date').value;
+        arr=arr.split("-");
+        console.log(arr);
+        if(isNaN(arr[0]) || arr[0]<1 || arr[0]>12){
+                alert('enter valid month');
+        }
+        else if(isNaN(arr[1]) || arr[1]<1 || arr[1]>31){
+                alert('enter a valid date');
+        }
+        else if(isNaN(arr[2]) || arr[2].length!=4){
+            alert('enter a valid year');
+        }
+        else{
+            document.getElementById('h2').innerHTML='Date Valid';
+        }    
+        }
+</script>
+</html>

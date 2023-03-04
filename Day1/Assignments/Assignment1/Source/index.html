@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS assignment 1</title>
+    <style>
+    * {
+        margin:10px;
+        font-size: 25px;
+    }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Please enter first number</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="name2">Please enter second number</label>
+        <input type="text" name="name2" id="name2"><br>
+        <label>Please select operation you want to perform</label><br>
+        <label for="radio">Addition</label>
+        <input type="radio" name="radio" value="r1" id="r1"><br>
+        <label for="radio">Subtraction</label>
+        <input type="radio" name="radio" value="r2" id="r2"><br>
+        <label for="radio">multiplication</label>
+        <input type="radio" name="radio" value="r3" id="r3"><br>
+        <label for="radio">division</label>
+        <input type="radio" name="radio" value="r4" id="r4"><br>
+        <button id="cal" type="button" onclick="calc()">calculate</button>
+        <button type="submit">reset</button>
+        <h2 id="h2">Your ans will be printed here</h2>
+    </form>
+</body>
+<script>
+    function calc() {
+        const a = Number(document.getElementById('name').value);
+        const b = Number(document.getElementById('name2').value);
+        if (a == "" || b == "") {
+            alert("Enter value");   
+        } else if (isNaN(a) || isNaN(b)) {
+            alert("please enter a valid number");
+        } else {
+            if (document.getElementById('r1').checked == true) {
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a + b);
+            } else if (document.getElementById('r2').checked == true) {
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a - b);
+            } else if (document.getElementById('r3').checked == true) {
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a * b);
+            } else if (document.getElementById('r4').checked == true) {
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a / b);
+            } else {
+                alert('please select operation');
+            }
+        }
+    }
+</script>
+
+</html>
