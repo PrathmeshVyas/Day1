@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,13 +43,13 @@
             alert("please enter a valid number");
         } else {
             if (document.getElementById('r1').checked == true) {
-                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a + b);
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseFloat(a + b);
             } else if (document.getElementById('r2').checked == true) {
-                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a - b);
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseFloat(a - b);
             } else if (document.getElementById('r3').checked == true) {
-                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a * b);
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseFloat(a * b);
             } else if (document.getElementById('r4').checked == true) {
-                document.getElementById('h2').innerHTML = 'Result is: ' + parseInt(a / b);
+                document.getElementById('h2').innerHTML = 'Result is: ' + parseFloat(a / b);
             } else {
                 alert('please select operation');
             }
